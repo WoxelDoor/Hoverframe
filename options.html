@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hoverframe Settings</title>
+  <style>
+    body {
+      font: 14px/1.5 "Segoe UI", system-ui, sans-serif;
+      color: #222; background: #fff;
+      margin: 0; padding: 16px 20px; min-width: 320px;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #ddd; background: #202124; }
+      .note { color: #999 !important; }
+    }
+    h1 { font-size: 16px; margin: 0 0 12px; }
+    label.row {
+      display: flex; align-items: center; gap: 10px;
+      padding: 7px 0; cursor: pointer;
+    }
+    label.row input[type="checkbox"] { width: 16px; height: 16px; }
+    .select-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; }
+    select { padding: 3px 6px; }
+    .note {
+      margin-top: 14px; padding-top: 10px; border-top: 1px solid #8884;
+      font-size: 12px; color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hoverframe Settings</h1>
+
+  <label class="row">
+    <input type="checkbox" id="showButton">
+    Show PiP button on videos
+  </label>
+  <label class="row">
+    <input type="checkbox" id="clickToPause">
+    Click the window to play/pause
+  </label>
+  <label class="row">
+    <input type="checkbox" id="dragAnywhere">
+    Drag the window from anywhere
+  </label>
+  <label class="row">
+    <input type="checkbox" id="keepAspect">
+    Keep video proportions when resizing
+  </label>
+  <div class="select-row">
+    <span>Skip buttons step:</span>
+    <select id="skipSeconds">
+      <option value="5">5 seconds</option>
+      <option value="10">10 seconds</option>
+      <option value="15">15 seconds</option>
+      <option value="30">30 seconds</option>
+    </select>
+  </div>
+  <div class="select-row">
+    <span>PiP button position on videos:</span>
+    <select id="buttonPosition">
+      <option value="left">Left edge</option>
+      <option value="top">Top edge</option>
+      <option value="right">Right edge</option>
+      <option value="bottom">Bottom edge</option>
+    </select>
+  </div>
+
+  <div class="note">
+    Hoverframe keeps settings in your browser profile and sends nothing anywhere.
+    No analytics, no tracking, no external requests.
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

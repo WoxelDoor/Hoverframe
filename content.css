@@ -1,0 +1,33 @@
+/* Hoverframe: floating button shown over hovered videos. */
+
+.hoverframe-button {
+  position: absolute;
+  z-index: 2147483647;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 16px;
+  background: rgba(24, 24, 24, 0.82);
+  color: #fff;
+  font: 600 12px/1 "Segoe UI", system-ui, sans-serif;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.hoverframe-button-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hoverframe-button:hover {
+  background: rgba(48, 48, 48, 0.95);
+}
+
+.hoverframe-button svg {
+  display: block;
+}

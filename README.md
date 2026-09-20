@@ -7,6 +7,8 @@ The browser's own picture-in-picture moves only by a thin bar at the top,
 ignores clicks on the picture, and lets the window stretch into any shape.
 Hoverframe fixes all three.
 
+![Drag to move. Click to pause. Resize keeps the aspect ratio.](media/gestures.png)
+
 ## What it does
 
 - **Drag from anywhere** — press any point of the video and move the window.
